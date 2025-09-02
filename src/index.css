@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply bg-gradient-to-b from-[#14022b] via-[#0f0824] to-[#0b061a] text-gray-200 antialiased; }
+  ::selection { @apply bg-violet-500 text-white; }
+}
+
+@layer components {
+  .container-default { @apply max-w-7xl mx-auto px-6; }
+  .btn-primary { @apply inline-flex items-center justify-center px-6 py-2 rounded-full font-medium bg-violet-500 text-white hover:bg-violet-400 transition-colors; }
+  .btn-outline { @apply inline-flex items-center justify-center px-6 py-2 rounded-full font-medium border border-violet-500 text-violet-400 hover:text-white hover:bg-violet-500 transition-colors; }
+  .glass { @apply bg-white/5 backdrop-blur-md border border-white/10; }
+  .card { @apply glass rounded-2xl hover:border-violet-500/40 transition-colors; }
+  .link-underline { @apply relative after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-violet-500 hover:after:w-full after:transition-all; }
+  .text-accent { @apply text-violet-400; }
+  .bg-accent { @apply bg-violet-500; }
+  .border-accent { @apply border-violet-500; }
+  .text-gradient-accent { @apply bg-gradient-to-r from-violet-400 via-fuchsia-500 to-purple-500 bg-clip-text text-transparent; }
+}
